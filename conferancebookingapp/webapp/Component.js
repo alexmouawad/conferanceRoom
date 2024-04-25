@@ -26,9 +26,16 @@ sap.ui.define([
 
                 // enable routing
                 this.getRouter().initialize();
-
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+            },
+            createContent: function() {
+                // create the views based on the router
+                return sap.ui.view({
+                    viewName: "com.conferancebookingapp.view.login",
+                    type: "XML",
+                    id: "app"
+                });
             }
         });
     }

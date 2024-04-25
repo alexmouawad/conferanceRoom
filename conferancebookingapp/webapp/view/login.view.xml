@@ -1,0 +1,24 @@
+<mvc:View controllerName="com.conferancebookingapp.controller.login"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    displayBlock="true">
+     <Page
+		title="conferance room app"
+        >     
+ <App id="app" class="ContentPadding">
+     <VBox class="vboxreg">
+            <Label text="Username" labelFor="input-username" />
+            <Input iconStart="sap-icon://account"  placeholder="enter username" id="input-username" />
+
+            <Label text="Password"  labelFor="input-password" />
+            <Input id="input-password" placeholder="enter password" type="Password" />
+
+            <Button text="Login" press="onLoginPress" />
+            <Button text="Register" press="onRegisterPress" />
+            <Button text="inside login" press="onPressGoToV" />
+      </VBox>
+    </App>
+</Page>
+</mvc:View>

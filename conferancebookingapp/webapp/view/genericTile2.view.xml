@@ -1,0 +1,97 @@
+<mvc:View
+controllerName="com.conferancebookingapp.controller.genericTile2"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+
+	xmlns="sap.m">
+<Page
+    title="timing" 
+    showNavButton="true"
+    navButtonPress=" onback">
+	
+    <ScrollContainer height="100%" vertical="true">
+            <layout:HorizontalLayout>
+                <layout:VerticalLayout width="80%">
+	   <Panel id="dateTimePanel"   class="sapUiTinyMargin">
+                        <form:SimpleForm
+		id="simpleForm"
+		columnsL="1"
+		columnsM="1"
+		editable="true"
+		labelSpanL="12"
+		labelSpanM="12"
+		layout="ResponsiveGridLayout">
+		<Title
+			text="Using a timezone"
+			titleStyle="H4" />
+		<Label text="Start Date" labelFor="DTP8"/>
+		<DateTimePicker
+			id="DTP8"
+			value="{
+				path:'/valueDTP8',
+				type:'sap.ui.model.type.DateTime',
+				formatOptions: {
+					'style': 'medium'
+				}
+			}"
+			showTimezone="true"
+			timezone="America/New_York"
+			class="sapUiSmallMarginBottom" />
+	   
+		<Label text="End date" labelFor="DTP1"/>
+		<DateTimePicker
+			id="DTP1"
+			placeholder=""
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+			
+		   <Label text="Room Name" labelFor="RoomSelect"/>
+            <Select
+                id="RoomSelect"
+                class="sapUiSmallMarginBottom">
+                <core:Item xmlns:core="sap.ui.core" key="1" text="Conference Room 1" />
+                <core:Item xmlns:core="sap.ui.core" key="2" text="Conference Room 2" />
+                <core:Item xmlns:core="sap.ui.core" key="3" text="Meeting Room 1" />
+
+            </Select>
+			        <Label text="Purpose" labelFor="PurposeInput"/>
+            <Input
+                id="PurposeInput"
+                class="sapUiSmallMarginBottom"/>
+	<Label text="numberOfGuests" labelFor="ParticipantCount"/>
+            <Input
+                id="numberOfGuests"
+                type="Number"
+                value="{/numberOfGuests}"
+                class="sapUiSmallMarginBottom"/>
+           </form:SimpleForm>
+		   
+         </Panel>    
+		                 
+	</layout:VerticalLayout>
+	
+<layout:VerticalLayout   >
+    <Panel height="100%" headerText="Booking Details"  class="sapUiTinyMargin">
+        <form:SimpleForm columnsL="1"  columnsM="1" editable="true" labelSpanL="6" labelSpanM="6" layout="ResponsiveGridLayout">
+            <Title text="Booking Information" titleStyle="H4" />
+            <Label text="Customer Name" labelFor="customerName" />
+            <Input id="customerName" value="{/customerName}" />
+
+            <Label text="Email Address" labelFor="emailAddress" />
+            <Input id="emailAddress" value="{/emailAddress}" />
+
+            <Label text="Date of Booking" labelFor="dateOfBooking" />
+            <DateTimePicker id="dateOfBooking" value="{/dateOfBooking}" />
+
+            <Label text="Number of Guests" labelFor="numberOfGuests" />
+ 
+          
+        </form:SimpleForm>
+    </Panel>
+</layout:VerticalLayout>
+
+     </layout:HorizontalLayout>
+    </ScrollContainer>
+ </Page>
+</mvc:View>

@@ -1,1 +1,53 @@
-/* Enter your custom styles here */
+
+.ContentPadding {
+
+    border-radius: 5px;
+
+  }
+  .RegContentPadding {
+
+    border-radius: 5px;
+
+  }
+  .vboxreg{
+    width: 30%;
+    margin-left: 30%;
+    border-radius: 5px;
+  }
+  .bookingFormContainer {
+    display: flex;
+    margin-right: 10%;
+}
+    .loginform  {
+    margin:30%;
+    
+   }
+  .sapUiContentPadding label {
+    display: block;
+    width: 300px;
+    color: black;
+  }
+  
+  .sapUiContentPadding input[type="text"],
+  .sapUiContentPadding input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .sapUiContentPadding input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .sapUiContentPadding input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

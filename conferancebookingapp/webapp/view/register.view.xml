@@ -1,0 +1,29 @@
+<mvc:View controllerName="com.conferancebookingapp.controller.register"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+
+    
+    
+     <App id="app" >
+     <Page  title="registration"  showNavButton="true" navButtonPress="onBack" >
+       <VBox class="vboxreg" >
+            <Label text="Username" labelFor="input-username" />
+            <Input id="input-username"  placeholder="create a username" />
+
+            <Label text="Password" labelFor="input-password" />
+            <Input id="input-password" type="Password"  placeholder="create a password" />
+
+            <Label text="First Name" labelFor="input-firstname" />
+            <Input id="input-firstname"  placeholder="Enter your first name" />
+
+            <Label text="Last Name" labelFor="input-lastname" />
+            <Input id="input-lastname"  placeholder="Enter your last name" />
+
+            <Button text="Register" press="onRegisterPress" />
+</VBox>
+              </Page>  </App>
+
+
+</mvc:View>

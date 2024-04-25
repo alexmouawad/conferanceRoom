@@ -1,0 +1,30 @@
+.bleucolor {
+    background-color: rgb(249, 249, 255); 
+}
+
+.button{
+width:60px;
+
+}
+.customPopoverWidth .sapMPopoverCont {
+    width: 60% !important; 
+}
+.myButton {
+    background-color: blue; 
+    color: white; 
+}
+.bookingFormContainer {
+    display: flex;
+    justify-content: center;
+}
+.imagecenter {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    padding-left: 30%;
+     padding-top: 10%;
+
+}
+.centre{
+    padding-left: 20%;
+}

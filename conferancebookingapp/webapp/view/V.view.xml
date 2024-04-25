@@ -1,0 +1,93 @@
+<mvc:View controllerName="com.conferancebookingapp.controller.C"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+	xmlns:fiori="sap.ui.webc.fiori"
+    xmlns:l="sap.ui.layout"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">   
+	    
+ 
+    <App id="app" width="100%" >
+      <pages>
+        <Page
+
+            title="registration"
+            showNavButton="true"
+            navButtonPress=" onback">  
+<SplitApp
+		id="SplitAppDemo">
+
+		<masterPages >
+	     <mvc:XMLView width="100%" viewName="com.conferancebookingapp.view.sideNav" />
+		</masterPages>
+		<detailPages>
+
+		<Page id="dashboardPage"  title="dashboard" >
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="upcoming booking" id="genericTile1" press="onPress"
+    frameType="upcoming" subheader="Subtitle">
+    <TileContent>
+        <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+    </TileContent>
+			</GenericTile>
+
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Jessica D. Prince Senior Consultant"
+				subheader="Department" id="genericTile2" press="onPress" frameType="TwoByHalf">
+				<TileContent>
+					<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/ProfileImage_LargeGenTile.png" />
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="genericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Country-Specific Profit Margin"  press="onPress"
+				frameType="OneByHalf" subheader="Subtitle">
+				<TileContent>
+					<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="genericTile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Country-Specific Profit Margin"  press="onPress"
+				frameType="OneByHalf" subheader="Subtitle">
+				<TileContent>
+					<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="genericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Country-Specific Profit Margin"  press="onPress"
+				frameType="OneByHalf" subheader="Subtitle">
+				<TileContent>
+					<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="genericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Country-Specific Profit Margin"  press="onPress"
+				frameType="OneByHalf" subheader="Subtitle">
+				<TileContent>
+					<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+				</TileContent>
+			</GenericTile>
+
+		</Page>
+		
+		<Page id="upcomingBooking">
+			<mvc:XMLView width="100%" viewName="com.conferancebookingapp.view.upcomingBooking" />
+		</Page>
+
+		<Page id="ongoingBooking">
+			<mvc:XMLView width="100%" viewName="com.conferancebookingapp.view.ongoingBooking" />
+		</Page>
+
+		<Page id="bookRoom">
+			<mvc:XMLView width="100%" viewName="com.conferancebookingapp.view.bookRoom" />
+		</Page>
+
+		<Page id="availableRoom">
+			<mvc:XMLView width="100%" viewName="com.conferancebookingapp.view.ongoingBooking" />
+		</Page>
+
+
+			</detailPages>
+		</SplitApp>
+	 </Page>
+   </pages>
+</App>
+
+</mvc:View>

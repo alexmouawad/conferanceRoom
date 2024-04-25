@@ -47,13 +47,25 @@
         "sap.ushell": {}
       }
     },
+    "config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"view/Page.view.xml",
+					"controller/Page.controller.js",
+					"test/items.json",
+					"manifest.json"
+				]
+			}
+		},
     "contentDensities": {
       "compact": true,
       "cozy": true
     },
     "models": {
       "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "tableData_alias",
         "settings": {
           "bundleName": "com.conferancebookingapp.i18n.i18n"
         }
@@ -74,32 +86,94 @@
         "viewPath": "com.conferancebookingapp.view",
         "controlAggregation": "pages",
         "controlId": "app",
+        
         "clearControlAggregation": false
+       
       },
       "routes": [
         {
-          "name": "RouteView1",
-          "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
+          "name": "login",
+          "pattern": "",
+          "target": "login"
+        },
+        {
+          "name": "register",
+          "pattern": "register",
+          "target": "register"
+        },
+        {
+          "name": "V",
+          "pattern": "V",
+          "target": "V"
+        },
+        {
+          "name": "genericTile1",
+          "pattern": "genericTile1",
+          "target": "genericTile1"
+        },
+
+        {
+          "name": "genericTile2",
+          "pattern": "genericTile2",
+          "target": "genericTile2"
+        },
+        {
+          "name": "genericTile3",
+          "pattern": "genericTile3",
+          "target": "genericTile3"
+        },
+        {
+          "name": "genericTile4",
+          "pattern": "genericTile4",
+          "target": "genericTile4"
+        } ,    
+           {
+          "name": "genericTile5",
+          "pattern": "genericTile5",
+          "target": "genericTile5"
         }
       ],
       "targets": {
-        "TargetView1": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
-        }
-      }
-    },
+        "login": {
+          "viewName": "login",
+          "viewLevel": 1
+        },
+        "register": {
+          "viewName": "register",
+          "viewLevel": 2
+        },
+        "V": {
+          "viewName": "V",
+          "viewLevel": 2
+        },
+        "genericTile1": {
+          "viewName": "genericTile1", 
+          "viewLevel": 1
+        },
+        "genericTile2": {
+          "viewName": "genericTile2", 
+          "viewLevel": 1
+        },
+        "genericTile3": {
+          "viewName": "genericTile3", 
+          "viewLevel": 1
+        },
+        "genericTile4": {
+          "viewName": "genericTile4", 
+          "viewLevel": 1
+        },
+        "genericTile5": {
+          "viewName": "genericTile5", 
+          "viewLevel": 1
+        },
+      
+
     "rootView": {
-      "viewName": "com.conferancebookingapp.view.App",
+      "viewName": "com.conferancebookingapp.view.login",
       "type": "XML",
       "async": true,
       "id": "App"
     }
   }
 }
+  }}

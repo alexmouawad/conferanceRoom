@@ -1,0 +1,37 @@
+<mvc:View
+	controllerName="com.conferancebookingapp.controller.sideNav"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:tnt="sap.tnt"
+	height="100%">
+    
+	
+	<VBox renderType="Bare" alignItems="Start" height="100%">
+		<Button
+			text="Toggle Collapse/Expand"
+			icon="sap-icon://menu2"
+			press=".onCollapseExpandPress" />
+
+ <tnt:SideNavigation id="sideNavigation" selectedKey="dashboard">
+    <tnt:NavigationList  itemSelect="onNavigationItemSelect">
+        <tnt:NavigationListItem text="Admin View"  icon="sap-icon://account" key="admin">
+            <tnt:NavigationListItem text="Dashboard" key="dashboard" />
+            <tnt:NavigationListItem text="Upcoming Booking" key="upcoming" />
+            <tnt:NavigationListItem text="Ongoing Booking" key="ongoing" />
+            <tnt:NavigationListItem text="History" key="history" id="walked" />
+        </tnt:NavigationListItem>
+        <tnt:NavigationListItem text="Booking" icon="sap-icon://account">
+            <tnt:NavigationListItem text="book a room" />
+            <tnt:NavigationListItem text="available room" />
+        </tnt:NavigationListItem>
+        <tnt:NavigationListItem text="meeting room" icon="sap-icon://kpi-managing-my-area" />
+        <tnt:NavigationListItem text="users" icon="sap-icon://flight" />
+        <tnt:NavigationListItem text="my view" icon="sap-icon://map-2" />
+        <tnt:NavigationListItem text="Running" icon="sap-icon://physical-activity" />
+        <tnt:NavigationListItem text="Scissors" icon="sap-icon://scissors" />
+        <tnt:NavigationListItem text="Transport" icon="sap-icon://passenger-train" />
+    </tnt:NavigationList>
+</tnt:SideNavigation>
+
+	</VBox>
+</mvc:View>
